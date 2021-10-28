@@ -1,15 +1,9 @@
 pipeline {
-  agent {
-    kubernetes {
-      yamlFile 'calculator.yaml'
-    }
-  }
-
-       stage("update calculator")
-
-                 sh "kubectl apply -f calculator.yaml"
-             
-  
-
-
+     agent any
+     stage("update calculator") {
+       sh 'echo "starting update"'
+       sh '''
+         kubectl apply -f calculator.yaml -n staging
+       '''         
+     }
 }
