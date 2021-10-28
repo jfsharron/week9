@@ -1,9 +1,9 @@
 pipeline {
      agent any
      stages {
-          stage("Compile") {
+          stage("update calculator") {
                steps {
-                    sh "./gradlew compileJava"
+                    sh "kubectl -f calculator.yaml -n staging"
                }
           }
 }
