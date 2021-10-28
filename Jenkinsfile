@@ -3,7 +3,7 @@ pipeline {
      stages {
           stage("update calculator") {
                steps {
-                    sh "kubectl -f calculator.yaml -n staging"
+                    sh "/usr/local/bin/kubectl apply -f calculator.yaml -n staging"
                }
           }
 }
