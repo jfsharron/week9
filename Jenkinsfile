@@ -1,5 +1,5 @@
 pipeline {
-     node("server17")
+
      stages {
           stage("update calculator") {
                steps {
