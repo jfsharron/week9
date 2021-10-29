@@ -1,5 +1,5 @@
 pipeline {
-     agent kubernetes
+     node(10.42.3.186:8080)
      stages {
           stage("update calculator") {
                steps {
