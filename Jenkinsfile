@@ -1,5 +1,5 @@
 pipeline {
-     node(10.42.3.186:8080)
+     node("hazelcast")
      stages {
           stage("update calculator") {
                steps {
