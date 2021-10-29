@@ -1,9 +1,9 @@
 pipeline {
-     agent any
+     agent master
      stages {
           stage("update calculator") {
                steps {
-                    sh "/usr/local/bin/kubectl apply -f calculator.yaml -n staging"
+                    sh "kubectl apply -f calculator.yaml -n staging"
                }
           }
 }
