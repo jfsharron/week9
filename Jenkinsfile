@@ -13,7 +13,7 @@ stages {
   stage('update calculator') {
     steps {
       echo "updating"
-      kubectl apply -f calc2.yaml -n staging
+      kubectl apply -f calc2.yaml 
     }
   }
 }
